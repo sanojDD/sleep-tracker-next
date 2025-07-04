@@ -1,4 +1,5 @@
 import AddNewRecord from "@/components/AddNewRecord";
+import AverageSleep from "@/components/AverageSleep";
 import Guest from "@/components/Guest";
 import RecordChart from "@/components/RecordChart";
 import { currentUser } from "@clerk/nextjs/server";
@@ -24,7 +25,7 @@ export default async function HomePage() {
             {/* User Details */}
             <div className="flex-1">
               <h2 className="text-2xl md:text-3xl font-bold text-purple-600 mb-2">
-                Welcome Back, {user.firstName} 👋
+                Welcome, {user.firstName} 👋
               </h2>
               <p className="text-gray-600 mb-4">
                 Here&#39;s a quick overview of your recent sleep activity. Stay
@@ -54,7 +55,7 @@ export default async function HomePage() {
         <div className="space-y-6">
           {/* Placeholder for RecordStats, RecentRecord, and Insights */}
           <RecordChart />
-          {/* <AverageSleep /> */}
+          <AverageSleep />
           {/* <BestWorstSleep /> */}
         </div>
       </div>
